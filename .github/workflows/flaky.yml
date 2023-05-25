@@ -18,6 +18,4 @@ jobs:
           java-version: 11
 
       - uses: gradle/gradle-build-action@v2
-
-      - run: mvn install -DskipTests -am -pl retrofit
       - run: mvn test -pl retrofit -Dtest=retrofit2.OptionalConverterFactoryAndroidTest.onlyMatchesOptional
