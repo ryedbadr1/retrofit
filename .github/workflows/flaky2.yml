@@ -27,6 +27,6 @@ jobs:
 
       - name: Build and test 
         run: |
-          mvn install -DskipTests -am -pl retrofit
+          mvn install -DskipTests -am -pl -X retrofit
           mvn test -pl retrofit -Dtest=retrofit2.OptionalConverterFactoryAndroidTest.onlyMatchesOptional
           mvn edu.illinois:nondex-maven-plugin:2.1.1:nondex -pl retrofit -DnondexRuns=10 -Dtest=retrofit2.OptionalConverterFactoryAndroidTest.onlyMatchesOptional
